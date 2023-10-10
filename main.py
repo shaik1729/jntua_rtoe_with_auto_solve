@@ -12,6 +12,8 @@ from selenium.webdriver.chrome.service import Service
 import platform
 import easygui
 
+url = "https://newconfig.nocaptchaai.com/?APIKEY=shaik1729-7acba325-dc92-ff5b-2569-7d75b6fafdbf&PLANTYPE=free&customEndpoint=&hCaptchaEnabled=true&reCaptchaEnabled=true&dataDomeEnabled=true&ocrEnabled=true&extensionEnabled=true&logsEnabled=false&fastAnimationMode=true&debugMode=false&hCaptchaAutoOpen=true&hCaptchaAutoSolve=true&hCaptchaAlwaysSolve=true&englishLanguage=true&hCaptchaGridSolveTime=7&hCaptchaMultiSolveTime=5&hCaptchaBoundingBoxSolveTime=5&reCaptchaAutoOpen=true&reCaptchaAutoSolve=true&reCaptchaAlwaysSolve=true&reCaptchaClickDelay=400&reCaptchaSubmitDelay=1&reCaptchaSolveType=image"
+
 
 def set_noai(driver):
     uname = easygui.enterbox("Enter the username for noapi: ")
@@ -228,7 +230,7 @@ def main(driver):
 if __name__ == "__main__":
 
     op = Options()
-    op.add_extension('./noai.crx')
+    op.add_extension('./noai_new.crx')
     platform_name = platform.system()
     if platform_name == "Windows":
         driver = webdriver.Chrome(service=Service("./driver/chromedriver.exe"),options=op)
